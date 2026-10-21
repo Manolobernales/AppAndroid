@@ -4,6 +4,8 @@
 
 **Firma PDF desde tu teléfono Android, con firma manuscrita y envío a otras aplicaciones.**
 
+> **Menos impresoras, menos escáneres y menos bolígrafos que desaparecen.** Firma en el teléfono y sigue con tu día. La única cosa que no firma es el gato; todavía no acepta los términos y condiciones. 😼
+
 FirmaPDF permite abrir un PDF, dibujar una firma con el dedo, colocarla sobre la página, imprimir el nombre del firmante y generar una copia del documento. Al terminar, se puede compartir el PDF mediante el menú nativo de Android.
 
 ## Descargar
@@ -27,7 +29,7 @@ La versión más reciente estará disponible en **[Releases](https://github.com/
 
 ## Privacidad y limitaciones
 
-FirmaPDF es una herramienta práctica para insertar una firma manuscrita en un PDF. **No genera una firma digital certificada ni verifica por sí sola la identidad del firmante.** El archivo JSON de auditoría es complementario y tampoco está firmado criptográficamente.
+FirmaPDF es una herramienta práctica para insertar una firma manuscrita en un PDF. **No genera una firma digital certificada ni verifica por sí sola la identidad del firmante.** El archivo JSON de auditoría es complementario y tampoco está firmado criptográficamente. En otras palabras: pone la firma donde debe ir, pero no transforma un garabato en una identidad verificada por arte de magia.
 
 La aplicación necesita conexión a internet para cargar las bibliotecas PDF.js y pdf-lib desde sus CDN. El procesamiento del documento se realiza localmente.
 
