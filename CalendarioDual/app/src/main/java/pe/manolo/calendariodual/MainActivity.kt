@@ -3,6 +3,7 @@ package pe.manolo.calendariodual
 import android.Manifest
 import android.app.Activity
 import android.appwidget.AppWidgetManager
+import android.widget.RemoteViews
 import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -133,6 +134,7 @@ class MainActivity : Activity() {
         })
 
         setContentView(root)
+        publishWidgetPreview()
         if (checkSelfPermission(Manifest.permission.READ_CALENDAR) == PackageManager.PERMISSION_GRANTED) {
             refreshWidget()
         }
@@ -144,6 +146,21 @@ class MainActivity : Activity() {
             val granted = grantResults.firstOrNull() == PackageManager.PERMISSION_GRANTED
             statusText.text = if (granted) "Permiso de calendario: concedido." else "Permiso denegado. Google Calendar no podrá mostrarse."
             if (granted) refreshWidget()
+        }
+    }
+
+    @Suppress("NewApi")
+    private fun publishWidgetPreview() {
+        if (android.os.Build.VERSION.SDK_INT >= 35) {
+            try {
+                AppWidgetManager.getInstance(this).setWidgetPreview(
+                    ComponentName(this, WeekWidgetProvider::class.java),
+                    AppWidgetManager.WIDGET_CATEGORY_HOME_SCREEN,
+                    RemoteViews(packageName, R.layout.week_widget_preview)
+                )
+            } catch (_: Exception) {
+                // El widget sigue funcionando en dispositivos que no aceptan la vista previa generada.
+            }
         }
     }
 
