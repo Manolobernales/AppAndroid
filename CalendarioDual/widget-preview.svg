@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" rx="24" fill="#f2f4f7"/>
+  <text x="42" y="52" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#172033">Calendario Dual — prueba de visualización</text>
+  <text x="42" y="82" font-family="Arial,sans-serif" font-size="16" fill="#566176">Vista ilustrativa del widget diagnóstico actual (no es una captura del emulador).</text>
+  <rect x="42" y="112" width="816" height="360" rx="30" fill="#242833"/>
+  <rect x="70" y="140" width="760" height="304" rx="18" fill="#111827"/>
+  <text x="94" y="177" font-family="Arial,sans-serif" font-size="15" fill="#cbd5e1">Pantalla de inicio Android</text>
+  <rect x="94" y="198" width="320" height="170" rx="18" fill="#1677e8"/>
+  <text x="118" y="258" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#ffffff">CALENDARIO DUAL</text>
+  <text x="118" y="294" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#ffffff">PRUEBA DE</text>
+  <text x="118" y="322" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#ffffff">VISUALIZACIÓN</text>
+  <text x="94" y="410" font-family="Arial,sans-serif" font-size="14" fill="#94a3b8">El objetivo es confirmar que aparece el rectángulo azul.</text>
+</svg>
