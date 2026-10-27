@@ -155,7 +155,7 @@ class MainActivity : Activity() {
             try {
                 AppWidgetManager.getInstance(this).setWidgetPreview(
                     ComponentName(this, WeekWidgetProvider::class.java),
-                    AppWidgetManager.WIDGET_CATEGORY_HOME_SCREEN,
+                    android.appwidget.AppWidgetProviderInfo.WIDGET_CATEGORY_HOME_SCREEN,
                     RemoteViews(packageName, R.layout.week_widget_preview)
                 )
             } catch (_: Exception) {
