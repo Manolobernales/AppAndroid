@@ -1,99 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:padding="8dp"
-    android:background="#FFFFFF">
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="16dp"
+    android:background="#173B70">
 
-    <LinearLayout
-        android:layout_width="112dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="8dp"
-        android:background="#EEF4FF">
+    <TextView
+        android:id="@+id/widget_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALENDARIO DUAL"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:maxLines="1" />
 
-        <TextView
-            android:id="@+id/month_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MES"
-            android:textStyle="bold"
-            android:textSize="12sp"
-            android:textColor="#173B70"
-            android:maxLines="1" />
-
-        <TextView
-            android:id="@+id/month_grid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="L M X J V S D"
-            android:fontFamily="monospace"
-            android:textSize="10sp"
-            android:lineSpacingExtra="2dp"
-            android:textColor="#243B53" />
-
-        <TextView
-            android:id="@+id/legend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="● Google\n○ Outlook"
-            android:textSize="9sp"
-            android:lineSpacingExtra="2dp"
-            android:textColor="#425466" />
-    </LinearLayout>
-
-    <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="8dp"
-        android:background="#D8E1EB" />
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp">
-
-        <TextView
-            android:id="@+id/week_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ESTA SEMANA"
-            android:textStyle="bold"
-            android:textSize="13sp"
-            android:textColor="#173B70"
-            android:maxLines="1" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="6dp"
-            android:background="#D8E1EB" />
-
-        <TextView
-            android:id="@+id/events"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="Cargando tus calendarios…"
-            android:textSize="11sp"
-            android:lineSpacingExtra="3dp"
-            android:textColor="#243B53"
-            android:gravity="top"
-            android:ellipsize="end" />
-
-        <TextView
-            android:id="@+id/footer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Toca el encabezado para configurar"
-            android:textSize="9sp"
-            android:textColor="#718096"
-            android:gravity="end" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/widget_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="El widget se muestra correctamente."
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:maxLines="2" />
 </LinearLayout>
