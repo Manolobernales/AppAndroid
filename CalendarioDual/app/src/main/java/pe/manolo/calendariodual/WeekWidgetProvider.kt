@@ -47,13 +47,20 @@ class WeekWidgetProvider : AppWidgetProvider() {
     private fun buildAgenda(context: Context, now: Calendar, locale: Locale): String {
         if (context.checkSelfPermission(Manifest.permission.READ_CALENDAR) != PackageManager.PERMISSION_GRANTED)
             return "Concede permiso\npara ver eventos."
+        // Semana de lunes a lunes, independiente de la preferencia regional.
+        // Usar Calendar.add evita errores en semanas con cambios de horario.
         val startCal = (now.clone() as Calendar).apply {
-            set(Calendar.DAY_OF_WEEK, firstDayOfWeek)
-            set(Calendar.HOUR_OF_DAY, 0); set(Calendar.MINUTE, 0)
-            set(Calendar.SECOND, 0); set(Calendar.MILLISECOND, 0)
+            set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }
+        val endCal = (startCal.clone() as Calendar).apply {
+            add(Calendar.DAY_OF_YEAR, 7)
         }
         val start = startCal.timeInMillis
-        val end = start + 7L * 24 * 60 * 60 * 1000
+        val end = endCal.timeInMillis
         val builder = CalendarContract.Instances.CONTENT_URI.buildUpon()
         android.content.ContentUris.appendId(builder, start)
         android.content.ContentUris.appendId(builder, end)
